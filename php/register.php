@@ -17,7 +17,7 @@ if (isset($_POST['create'])) {
         exit();
     }
     else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../register.html?error=invalidmail&username=".$username.);
+        header("Location: ../register.html?error=invalidmail&username=".$username);
         exit();
     }
     else if (!preg_match("^[a-zA-Z0-9]*$/", $username)) {
