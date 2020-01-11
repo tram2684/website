@@ -12,7 +12,7 @@ if (isset($_POST['create'])) {
         header("Location: ../register.html?error=emptyfields&username=".$username."&email=".$email);
         exit();
     }
-    else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("^[a-zA-Z0-9]*$/", $username)) {
+    else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && (!preg_match("^[a-zA-Z0-9]*$/", $username)) {
         header("Location: ../register.html?error=invalidusernameemail");
         exit();
     }
