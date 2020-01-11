@@ -1,5 +1,5 @@
 <?php
-$servername = "grandteaparty.xp3.biz";
+$servername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
 $dbName = "68435";
