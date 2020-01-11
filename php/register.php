@@ -16,7 +16,6 @@ if (isset($_POST['create'])) {
         header("Location: ../register.html?error=invalidusernameemail");
         exit();
     }
-    ]
     else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         header("Location: ../register.html?error=invalidmail&username=".$username.);
         exit();
