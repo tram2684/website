@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -21,7 +24,7 @@
                 <h1 >Grand Tea Party</h1>
             </div>
          </div>
-
+        
         <nav class="topnav">
 			<div class="topnav-left">
 				<a href="index.html">Home</a>
@@ -30,12 +33,13 @@
                 <a href="works.html">Our Works</a>
                 <a href="chatroom.html">Chatroom</a>
 			</div>
-
+        
 			<div class="topnav-right">
-				<a class="active" href="login.html">Log in</a>
-				<a href="register.html">Register</a>
+				<a class="active" href="login.php">Log in</a>
+				<a href="register.php">Register</a>
 			</div>
         </nav>
+    
         
         <div class="form-container">
             <div>
@@ -43,9 +47,9 @@
                     <img id ="user-avatar" src="media/images/user-avatar.png" alt="User avatar">
                     <h2>GTP Login</h2>
                     <div>
-                        <input id="usrname" type="text" name="usrname" placeholder="Enter Username/Email" required>
+                        <input id="usrname" type="text" name="mailusrname" placeholder="Enter Username/Email" required>
                         <input id="psw" type="password" name="psw" placeholder="Enter Password" required>
-                        <button type="submit">Login</button>
+                        <button type="submit" name="login">Login</button>
                         <input id="rmb" type="checkbox" checked="checked" name="remember">
                         <label id="rmb-label">Remember Me</label>
                     </div>

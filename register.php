@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,8 +35,8 @@
 			</div>
 
 			<div class="topnav-right">
-				<a href="login.html">Log in</a>
-				<a class="active" href="register.html">Register</a>
+				<a href="login.php">Log in</a>
+				<a class="active" href="register.php">Register</a>
 			</div>
         </nav>
 

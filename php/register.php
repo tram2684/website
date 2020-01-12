@@ -9,10 +9,10 @@ if (isset($_POST['create'])) {
     $confirmpsw = $_POST['confirmpsw'];
 
     if (empty($username) || empty($password) || empty($email) || empty($confirmpsw)) {
-        header("Location: ../register.html?error=emptyfields&username=".$username."&email=".$email);
+        header("Location: ../register.html?error=emptyfields");
         exit();
     }
-    else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && (!preg_match("^[a-zA-Z0-9]*$/", $username)) {
+    else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
         header("Location: ../register.html?error=invalidusernameemail");
         exit();
     }
@@ -29,7 +29,7 @@ if (isset($_POST['create'])) {
         exit();
     }
     else {
-        $sql = "SELECT username FROM users WHERE username=?";
+        $sql = "SELECT username FROM users WHERE users=?";
         $stmt = mysqli_stmt_init($conn);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location: ../register.html?error=sqlerror");
